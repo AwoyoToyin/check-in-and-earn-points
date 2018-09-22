@@ -10,6 +10,7 @@ class PersonRouter {
         this.router.get('/here', PersonConnector.ping);
         this.router.post('/signup', PersonConnector.signup);
         this.router.post('/setAddress', PersonConnector.setAddress);
+        this.router.post('/check_in', PersonConnector.check_in);
 
         return this.router;
     }
