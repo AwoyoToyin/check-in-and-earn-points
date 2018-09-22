@@ -1,4 +1,3 @@
-// import { logger } from '../../../config';
 import { AbstractConnector } from '../core';
 import AddressModel from './address.model';
 
