@@ -1,0 +1,34 @@
+import mongoose from 'mongoose';
+
+const Schema = mongoose.Schema;
+
+const CheckInSchema = new Schema({
+    formatted: {
+        type: String,
+        required: [true, 'name is required'],
+    },
+    longitude: {
+        type: String,
+        required: [true, 'longitude is required'],
+    },
+    latitude: {
+        type: String,
+        required: [true, 'latitude is required'],
+    },
+    distance: {
+        type: Number,
+        required: [true, 'distance is required'],
+    },
+    earning: {
+        type: Number,
+        required: [true, 'earning is required'],
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user',
+    },
+}, { timestamps: true });
+
+const CheckIn = mongoose.model('checkin', CheckInSchema);
+
+export default CheckIn;
