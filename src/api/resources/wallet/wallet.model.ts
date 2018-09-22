@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const WalletSchema = new Schema({
     balance: {
         type: Number,
-        required: [true, 'name is required'],
+        default: 1.00,
     },
     owner: {
         type: mongoose.Schema.Types.ObjectId,
