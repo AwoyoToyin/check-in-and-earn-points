@@ -19,14 +19,14 @@ export default abstract class AbstractConnector {
     }
 
     /**
-     * Create entity
+     * Create an entity
      * @param data T
      * @returns Promise<T>
      */
     public create = async<T> (data: T): Promise<T> => {
         try {
-            const address: any = await this.model.create(data);
-            return address;
+            const entity: T = await this.model.create(data);
+            return entity;
         } catch (error) {
             throw error;
         }
