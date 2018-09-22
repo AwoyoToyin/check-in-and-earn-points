@@ -1,7 +1,7 @@
 import * as bodyParser from 'body-parser';
 import express from 'express';
 
-import { PersonRouter } from './api/resources';
+import { UserRouter, WalletRouter } from './api/resources';
 import { DB } from './config';
 
 class App {
@@ -22,7 +22,8 @@ class App {
     }
 
     private registerRouters(): void {
-        this.app.use('/person', PersonRouter);
+        this.app.use('/user', UserRouter);
+        this.app.use('/wallet', WalletRouter);
     }
 
     private openDBConnection(): void {

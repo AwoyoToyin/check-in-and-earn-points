@@ -1,7 +1,7 @@
 import { INode } from '../core';
-import { IPerson } from '../person';
+import { IUser } from '../user';
 
 export default interface IWallet extends INode {
     balance: number;
-    owner: IPerson | string;
+    user: IUser;
 }

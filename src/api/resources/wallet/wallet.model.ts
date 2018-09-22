@@ -7,9 +7,9 @@ const WalletSchema = new Schema({
         type: Number,
         default: 1.00,
     },
-    owner: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'person',
+        ref: 'user',
     },
 }, { timestamps: true });
 

@@ -2,7 +2,7 @@ import { IAddress } from '../address';
 import { INode } from '../core';
 import { IWallet } from '../wallet';
 
-export default interface IPerson extends INode {
+export default interface IUser extends INode {
     name?: string;
     username?: string;
     password?: string;

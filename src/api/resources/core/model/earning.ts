@@ -4,6 +4,10 @@ export default class Earning {
 
     protected distance = 0.0;
 
+    public get distanceSinceLast(): number {
+        return this.distance;
+    }
+
     /**
      * Get the distance between both coordinates
      * @param currentPoint number
@@ -16,17 +20,17 @@ export default class Earning {
 
     /**
      * Get the distance between both coordinates
-     * @param home IAddress
+     * @param previous IAddress
      * @param current IAddress
      * @returns Promise<number>
      */
-    public getDistance = (home: IAddress, current: IAddress): this => {
+    public getDistance = (previous: IAddress, current: IAddress): this => {
         const decimals = 2;
         const earthRadius = 6371;
 
-        let lat1 = parseFloat(home.latitude);
+        let lat1 = parseFloat(previous.latitude);
         let lat2 = parseFloat(current.latitude);
-        const lon1 = parseFloat(home.longitude);
+        const lon1 = parseFloat(previous.longitude);
         const lon2 = parseFloat(current.longitude);
 
         const dLat = this.toRad((lat2 - lat1));

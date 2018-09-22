@@ -1,5 +1,7 @@
-import PersonRouter from './person/person.router';
+import UserRouter from './user/user.router';
+import WalletRouter from './wallet/wallet.router';
 
 export {
-    PersonRouter,
+    UserRouter,
+    WalletRouter,
 };

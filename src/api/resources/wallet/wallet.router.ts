@@ -7,7 +7,7 @@ class WalletRouter {
 
     public routes(): Router {
 
-        this.router.get('/here', WalletConnector.ping);
+        this.router.get('/spend', WalletConnector.spend);
 
         return this.router;
     }

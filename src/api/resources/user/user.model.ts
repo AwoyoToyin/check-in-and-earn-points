@@ -3,7 +3,7 @@ import uniqueValidator from 'mongoose-unique-validator';
 
 const Schema = mongoose.Schema;
 
-const PersonSchema = new Schema({
+const UserSchema = new Schema({
     name: {
         type: String,
         required: [true, 'name is required'],
@@ -34,8 +34,8 @@ const PersonSchema = new Schema({
     },
 }, { timestamps: true });
 
-PersonSchema.plugin(uniqueValidator, { message: 'is already taken.' });
+UserSchema.plugin(uniqueValidator, { message: 'is already taken.' });
 
-const Person = mongoose.model('person', PersonSchema);
+const User = mongoose.model('user', UserSchema);
 
-export default Person;
+export default User;

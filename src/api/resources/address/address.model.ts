@@ -15,9 +15,9 @@ const AddressSchema = new Schema({
         type: String,
         required: [true, 'latitude is required'],
     },
-    owner: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'person',
+        ref: 'user',
     },
 }, { timestamps: true });
 
