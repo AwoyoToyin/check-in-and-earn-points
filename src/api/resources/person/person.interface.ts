@@ -7,7 +7,7 @@ export default interface IPerson extends INode {
     username?: string;
     password?: string;
     wallet?: IWallet;
-    home_address?: IAddress;
+    address?: IAddress;
     token?: string;
     active?: boolean;
 }
